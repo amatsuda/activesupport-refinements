@@ -21,6 +21,8 @@ Dir.chdir core_ext_dir do
       # +module Object::TryExt
       # +refine Object do
       body = f.gsub(/^(\s)*(?:class|module) (?!QualifiedConstUtils)([A-Z][^\s]*).*/) { "#{$1}refine #{$2.chomp} do" }
+      # alias doesn't work inside Refinements
+      body = body.gsub(/^( *alias.*)/) { "##{$1}" }
 
       File.open(fn, 'w') do |new_file|
         new_file.write <<-EOF
