@@ -23,5 +23,9 @@ end
 EOF
       end
     end
+
+    # -require 'active_support/core_ext/object/blank'
+    # +require 'active_support/refinements/core_ext/object/blank'
+    `sed -i '' "s/require 'active_support\\\/core_ext\\\//require 'active_support\\\/refinements\\\/core_ext\\\//" *.rb **/*.rb`
   end
 end
