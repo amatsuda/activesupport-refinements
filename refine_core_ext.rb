@@ -1,7 +1,14 @@
 #!/usr/bin/env ruby
 require 'active_support/all'
 
-Dir.chdir 'lib/active_support/refinements/core_ext' do
+AS_SRC = '~/src/rails/activesupport'
+
+core_ext_dir = File.join File.dirname(__FILE__), 'lib/active_support/refinements/core_ext'
+
+# copy AS src
+`rm -rf #{core_ext_dir} && mkdir -p #{core_ext_dir} && cp -R #{AS_SRC}/lib/active_support/core_ext/ #{core_ext_dir}`
+
+Dir.chdir core_ext_dir do
   Dir.glob('**/*.rb').each do |fn|
     f = File.read fn
     if f =~ /^\S*(class|module) [A-Z]/
