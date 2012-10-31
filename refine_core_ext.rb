@@ -10,6 +10,11 @@ core_ext_dir = File.join File.dirname(__FILE__), 'lib/active_support/refinements
 
 Dir.chdir core_ext_dir do
   Dir.glob('**/*.rb').each do |fn|
+    next if ['date_and_time/calculations.rb',  # nested modules
+             'object/to_json.rb',  # defines a new module
+             'string/output_safety.rb',  # defines a new class
+             'module/aliasing.rb'  # aliases
+      ].include? fn
     f = File.read fn
     if f =~ /^\S*(class|module) [A-Z]/
       p fn
