@@ -23,6 +23,8 @@ See specs for more details.
 
 You can also regenerate newer version of ActiveSupport::Refinements by running `refine_core_ext.rb` script.
 
+Note that not all modules are working ATM.
+
 ## Contributing
 
 1. Fork it
