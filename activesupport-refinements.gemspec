@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = Activesupport::Refinements::VERSION
   gem.authors       = ["Akira Matsuda"]
   gem.email         = ["ronnie@dio.jp"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = 'Side-effect-free ActiveSupport using Refinements'
+  gem.summary       = 'ActiveSupport + Ruby 2.0 refinements'
+  gem.homepage      = 'https://github.com/amatsuda/activesupport-refinements'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

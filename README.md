@@ -1,6 +1,6 @@
-# Activesupport::Refinements
+# ActiveSupport::Refinements
 
-TODO: Write a gem description
+ActiveSupport + Ruby 2.0 Refinements
 
 ## Installation
 
@@ -18,7 +18,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You can pick some side-effect-free clean core_ext features by requiring 'active_support/refinements/core_ext/**/*' and `using` modules defined there.
+See specs for more details.
+
+You can also regenerate newer version of ActiveSupport::Refinements by running `refine_core_ext.rb` script.
 
 ## Contributing
 
