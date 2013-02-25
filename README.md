@@ -2,6 +2,11 @@
 
 ActiveSupport + Ruby 2.0 Refinements
 
+## Warning (or why this gem might be totally useless for you)
+
+This project was created for experimenting the initial implementation of Ruby 2.0 Refinements.
+And unfortunately, due to the Refinements' spec change, this library does not work under Ruby 2.0.0 stable.
+
 ## Installation
 
 Add this line to your application's Gemfile:
